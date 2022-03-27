@@ -12,4 +12,4 @@ while True:
         print("Temp={0:0.1f}F Humidity={1:0.1f}".format(fahrenheit, humidity))
     else:
         print("Sensor Error. Check wiring!")
-    time.sleep(3)
+    time.sleep(1)
