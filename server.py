@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
+import humidity-temperature.py
+
 
 app = Flask(__name__)
 CORS(app)
