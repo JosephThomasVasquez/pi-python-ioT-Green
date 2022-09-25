@@ -54,15 +54,19 @@ def readHumidityTemperature():
     if humidity is not None and temperature is not None:
 
         # Draw Some Text
+        # Convert Celsius to Fahrenheit
         fahrenheit = (temperature * 9 / 5) + 32
+        
         text = "T:" + str(fahrenheit) + "F°" + " H:" + str(humidity) + "%"
+        
         print("Temp={0:0.1f}F° Humidity={1:0.1f}%".format(fahrenheit, humidity))
         (font_width, font_height) = font.getsize(text)
+        
         draw.text(
             (oled.width // 2 - font_width // 2, oled.height // 2 - font_height // 2),
             text,
             font=font,
-            fill=255,
+            fill=200,
         )
 
         # Display image
